@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>News Scraper</title>
+    {{!--
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> --}} {{!--
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav-wrapper teal">
+                    <a href="#" class="brand-logo">News Feed!</a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="/scrape">Check for new articles</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {{{ body }}}
+    </div>
+    {{!--
+    <script src="assets/js/app.js"></script> --}}
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.collapsible').collapsible({
+                onOpen:function(el){$(el).children('div').children('a').text('collapse')},
+                onClose:function(el){$(el).children('div').children('a').text('expand')}
+            });
+        });
+    </script>
+</body>
+
+</html>
